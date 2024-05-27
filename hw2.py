@@ -6,6 +6,20 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+coins = [0, 1, 1, 1, 1, 0]
+coin0 = 0
+coin1 = 0
+
+for coin in coins:
+    if coin == 0:
+        coin0 += 1
+    else:
+        coin1 += 1
+
+if coin0 > coin1:
+    print(coin1)
+else:
+    print(coin0)
 
 
 # Задача 12: Петя и Катя – брат и сестра. Петя – студент, а Катя –
@@ -16,6 +30,8 @@
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 
+s = 12
+p = 27
 
 
 # Задача 14: Требуется вывести все целые степени двойки (т.е. числа
@@ -23,9 +39,9 @@
 # ), не превосходящие числа N.
 # 10 -> 1 2 4 8
 
-for i in range(1000):
-    for j in range(1000):
-        if j + i == s and i * j = p:
-или
-for i in range(1000):
-    if j = s - i and i * (s - i) = p
+# for i in range(1000):
+#     for j in range(1000):
+#         if j + i == s and i * j = p:
+# или
+# for i in range(1000):
+#     if j = s - i and i * (s - i) = p
