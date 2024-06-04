@@ -44,3 +44,18 @@
 # Input: [0, -1, 5, 2, 3]
 # Output: 2 (-1 < 5, 2 < 3)
 
+dikt1 = {333:2,(1,2):3,"serw":[1,2]}
+# print(dikt1)
+# for i in dikt1:
+# print(i,dikt1[i])
+# for i in dikt1.values():
+# print(i)
+for i,j in dikt1.items():
+print(i,j)
+
+sp = [1, 1, 2, 0, -1, 3, 4, 4]
+a = list()
+for c in sp:
+if c not in a:
+a.append(c)
+print(len(a))
