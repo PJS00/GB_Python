@@ -106,10 +106,10 @@
 # Sample Output 3:
 # 31
 
-string = 'ООООРРРРОРОРРРРРРРРООРОРОРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРР'
-print(string)
+# string = 'ООООРРРРОРОРРРРРРРРООРОРОРРРРРРРРРРРРРРРРРРРРРРРРРРРРРРР'
+# print(string)
 
-i = 1
-while 'Р' * i in string:
-    i += 1
-print(i - 1)
+# i = 1
+# while 'Р' * i in string:
+#     i += 1
+# print(i - 1)
