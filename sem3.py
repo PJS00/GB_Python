@@ -10,17 +10,21 @@
 
 # from array import array
 
+# count = 0
+# for i in list_1:
+#     if i == k:
+#         count += 1
+# print(count)
+
 # n = int(input('Введите количество чисел: '))
 # if n <= 0:
 #     print('Число не положительное')
 #     exit()
-
-# data = array('i')
+# data = []
 # for i in range(n):
 #     data.append(int(input('Введите число № {}: '.format(i + 1))))
 
 # x = int(input('Введите число для поиска: '))
-
 # count = data.count(x)
 # print(count)
 
@@ -35,8 +39,23 @@
 # 6
 # -> 5
 
+# a = list_1[0]
+# for i in list_1:
+#     if abs(i - k) < abs(a - k):
+#         a = i
 
+# print(a)
 
+# n = int(input('Введите количество чисел: '))
+# data = []
+# for i in range(n):
+#     data.append(int(input('Введите число № {}: '.format(i + 1))))
+# x = int(input('Введите число для поиска: '))
+# num = data[0]
+# for i in data:
+#     if abs(i - x) < abs(num - x):
+#         num = i
+# print(num)
 
 # Задача №17. 
 # Дан список чисел. Определите, сколько в нем
@@ -74,7 +93,19 @@
 # ":" S007 "}]
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
+dict1 = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V" :"S009"}, {"VIII" : "S007"}]
 
+# 1. разбить список на элементы
+# 2. объединить в словарь
+# 3. выбрать значения словаря
+# 4. создать множество
+list_1 = set()
+
+for i in dict1:
+    for v in i.values():
+        list_1.add(v)
+
+print(list_1)
 
 # Задача №23. Решение в группах
 # Дан массив, состоящий из целых чисел. Напишите
