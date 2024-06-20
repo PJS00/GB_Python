@@ -93,19 +93,19 @@
 # ":" S007 "}]
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
-dict1 = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V" :"S009"}, {"VIII" : "S007"}]
+# dict1 = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V" :"S009"}, {"VIII" : "S007"}]
 
-# 1. разбить список на элементы
-# 2. объединить в словарь
-# 3. выбрать значения словаря
-# 4. создать множество
-list_1 = set()
+# # 1. разбить список на элементы
+# # 2. объединить в словарь
+# # 3. выбрать значения словаря
+# # 4. создать множество
+# list_1 = set()
 
-for i in dict1:
-    for v in i.values():
-        list_1.add(v)
+# for i in dict1:
+#     for v in i.values():
+#         list_1.add(v)
 
-print(list_1)
+# print(list_1)
 
 # Задача №23. Решение в группах
 # Дан массив, состоящий из целых чисел. Напишите
@@ -115,24 +115,12 @@ print(list_1)
 # Input: [0, -1, 5, 2, 3]
 # Output: 2 (-1 < 5, 2 < 3)
 
+list_1 = [0, -1, 5, 2, 3]
+count = 0
+i = 0
+for i in range(len(list_1)):
+    if list_1[i-1] < list_1[i]:
+        count += 1
 
+print(count)
 
-
-
-
-
-# dikt1 = {333:2,(1,2):3,"serw":[1,2]}
-# # print(dikt1)
-# # for i in dikt1:
-# # print(i,dikt1[i])
-# # for i in dikt1.values():
-# # print(i)
-# for i,j in dikt1.items():
-#     print(i,j)
-
-# sp = [1, 1, 2, 0, -1, 3, 4, 4]
-# a = list()
-# for c in sp:
-#     if c not in a:
-#         a.append(c)
-# print(len(a))
