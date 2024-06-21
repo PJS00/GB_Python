@@ -36,6 +36,22 @@
 
 # ShowNewList(st)
 
+#  код с семинара
+# dict = {}
+# string = "a a a b c a a d c d d"
+# string_res = ""
+
+# for i in string.split():
+#     count = dict.get(i)
+#     if count != None:
+#         string_res = string_res + i + "_" + str(count) + " "
+#         dict[i] = count + 1
+#     else:
+#         dict[i] = 1
+#         string_res = string_res + i + " "
+
+# print(string_res)
+
 # Не работет
 # chg_st = [st1.replace(key, value)
 #           for value in st1
@@ -67,6 +83,7 @@
 
 # input_str = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
 
+#  оптимизированный код
 # # words_num = len(set(input_str.replace(".", ' ').lower().split(" ")))
 # # print(words_num)
 
@@ -98,9 +115,9 @@
 # n = int(input())
 # max_number = 1000
 # while n != 0:
-#  n = int(input())
-#  if max_number > n:
-#  max_number = n
+#    n = int(input())
+#    if max_number > n:
+#     max_number = n
 # print(max_number)
 
 # Петя:
@@ -111,3 +128,75 @@
 #  if max_number < n:
 #  n = max_number
 # print(n) 
+
+# num = int(input())
+# max_num = num
+# while num != 0:
+#     if num > max_num:
+#         max_num = num
+#     num = int(input())
+# print(max_num)
+
+# Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с
+# повторениями). Выдать без повторений в порядке возрастания все те числа, которые
+# встречаются в обоих наборах.
+# Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
+# элементов второго множества. Затем пользователь вводит сами элементы множеств.
+# 11 6
+# 2 4 6 8 10 12 10 8 6 4 2
+# 3 6 9 12 15 18
+# 6 12
+
+# n = int(input('Введите количество чисел первого множества: '))
+# m = int(input('Введите количество чисел второго множества: '))
+# data_n = []
+# data_m = []
+# for i in range(n):
+#     data_n.append(int(input('Введите число первого множества № {}: '.format(i + 1))))
+# num = data_n[0]
+
+# for i in range(m):
+#     data_m.append(int(input('Введите число второго множества № {}: '.format(i + 1))))
+# num = data_m[0]
+
+# data_n = set(data_n)
+# data_m = set(data_m)
+
+# data_m_n = data_n.intersection(data_m)
+# print(data_m_n)
+
+
+
+# data_n = '2 4 6 8 10 12 10 8 6 4 2'
+# data_m = '3 6 9 12 15 18'
+# data_n = set(data_n.split())
+# data_m = set(data_m.split())
+
+# data_m_n = data_n.intersection(data_m)
+# print(data_m_n)
+
+# Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
+# круглой грядке, причем кусты высажены только по окружности. Таким образом, у
+# каждого куста есть ровно два соседних. Всего на грядке растет N кустов.
+# Эти кусты обладают разной урожайностью, поэтому ко времени сбора на них
+# выросло различное число ягод – на i-ом кусте выросло ai
+#  ягод.
+# В этом фермерском хозяйстве внедрена система автоматического сбора черники.
+# Эта система состоит из управляющего модуля и нескольких собирающих модулей.
+# Собирающий модуль за один заход, находясь непосредственно перед некоторым
+# кустом, собирает ягоды с этого куста и с двух соседних с ним.
+# Напишите программу для нахождения максимального числа ягод, которое может
+# собрать за один заход собирающий модуль, находясь перед некоторым кустом
+# заданной во входном файле грядки.
+# 4 -> 1 2 3 4
+# 9
+
+# неверно
+# arr = '1 2 3 4'
+# arr = arr.split()
+# i = 0
+# sum = 0
+# for i in range(len(arr)-1):
+#     if (arr[i-1] + arr[i] + arr[i+1]) > sum:
+#         sum = arr[i-1] + arr[i] + arr[i+1]
+# print(sum)
