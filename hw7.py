@@ -15,16 +15,16 @@
 # 2 4 6 
 # 3 6 9
 
-# def print_operation_table(operation, num_rows, num_columns):
+# def print_operation_table(operation, num_rows=9, num_columns=9):
 #     if num_columns < 2 or num_rows < 2:
 #         print('ОШИБКА! Размерности таблицы должны быть больше 2!')
 #         return
 #     for row in range(1 , num_rows + 1):
 #         list = []
 #         for column in range(1, num_columns + 1):
-#             list.append(row * column)
+#             list.append(operation(row, column))
 #         print(*list)
-# print_operation_table(lambda x, y: x * y, 3, 3)
+# print_operation_table(lambda x, y: x / y, 3, 3)
 
 
 # Винни-Пух попросил Вас посмотреть, есть ли в его стихах ритм. Поскольку разобраться в его кричалках не настолько просто, насколько легко он их придумывает, Вам стоит написать программу.
@@ -39,20 +39,36 @@
 # На выходе:
 # Парам пам-пам
 
+# stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+# stroka = 'пара-ра-рам рам-пам-папам па-ра-па'
+stroka = 'пара-ра-рам'
+vowels = 'аеёиоуыэюя'
+
 def rhythm(stroka):
     stroka = stroka.split()
-    list = []
-    for word in stroka:
-        result = 0
-        for i in word:
-            if i in 'аеёиоуыэюя':
-                result += 1
-        list.append(result)
-    return len(list) == list.count(list[0])
 
-print('Введите: пара-ра-рам рам-пам-папам па-ра-па-дам')
-stroka = input()
-if rhythm(stroka):
+    if len(stroka) <= 1:
+        print('Количество фраз должно быть больше одной!')
+        return
+    
+    current_phrase_syllables = 0
+    previous_phrase_syllables = 0
+
+    for char in stroka[0]:
+        if char in vowels:
+            previous_phrase_syllables += 1
+
+    for phrase in stroka: 
+        for char in phrase:
+            if char in vowels:
+                current_phrase_syllables += 1
+        if current_phrase_syllables != previous_phrase_syllables:
+            print('Пам парам')
+            return
+        previous_phrase_syllables = current_phrase_syllables
+        current_phrase_syllables = 0
+
     print('Парам пам-пам')
-else:
-    print('Пам парам')
+
+
+rhythm(stroka)
