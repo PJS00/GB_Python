@@ -20,21 +20,20 @@
 # Задача
 # определить полиндром введеное слово или нет через рекурсию
 
-# какая-то неработающая фигня
-# word = 'abc'
-# print(word[0])
-# print(word[-1])
+# какая-то фигня
+## word = 'abc'
+## print(word[0])
+## print(word[-1])
 # def pal_word(word, start, end):
-#     print(f'start = {start}\t{word[start]}\t{word[end]}\tlen: {len(word)/2}')
 #     if len(word) == 1:
 #         return True
 #     if start >= (len(word) / 2):
 #         return True
 #     if word[start] == word[end]:
-#         pal_word(word, start + 1, end - 1)
+#         return pal_word(word, start + 1, end - 1)
 #     return False
 
-# print(pal_word('abba', 0, -1))
+# print(pal_word('abcdba', 0, -1))
 
 
 # работающая фигня
@@ -105,6 +104,39 @@
 # 300 220 284
 # Подсказка
 # прогнать все числа от 0 до 300, список из кортежей (число и сумма делителей)
+# k = 300
+# a = []
+# b = []
+# for i in range(k):
+#     summa = 0
+#     for j in range(1, i // 2 + 1):
+#         if i%j==0:
+#             summa += j
+#     if summa > 1:
+#         a.append(summa)
+#         b.append(i)
+# # print(summa)
+# # print(a)
+# # print(b)
+
+# for z in range(len(a)):
+#     for y in range(z):
+#         if a[z] == b[y] and b[z] == a[y]:
+#             print(b[z], b[y])
+
+# через кортежи
+# n = int(input())
+# list_1 = list()
+# for i in range(n):
+#     summa = 0
+#     for j in range(1, i // 2 + 1):
+#         if i % j == 0:
+#             summa += j
+#             list_1.append(tuple([i, summa]))
+#     for i in range(len(list_1)):
+#         for j in range(i, len(list_1)):
+#             if i != j and list_1[i][0] == list_1[j][1] and list_1[i][1] == list_1[j][0]:
+#                 print(*list_1[i])
 
 
 # Задача 30: Заполните массив элементами арифметической
