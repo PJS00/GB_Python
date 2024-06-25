@@ -98,6 +98,14 @@
 # max_orbits = [(i[0], i[1]) for i in orbits if i[0] == max(sqare) / i[1]]
 # print(*max_orbits)
 
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+# print(*max([orbit for orbit in orbits if orbit[0] != orbit[1]], key=lambda x: x[0] * x[1]))
+
+# print(*max(orbits, key=lambda x: x[0] * x[1]*(x[0] != x[1])))
+
+
+# print([yes, no][x>10])
+
 
 # Задача №51. Решение в группах
 # Напишите функцию same_by(characteristic, objects), которая
@@ -188,3 +196,42 @@
 #             list.append(operation(row, column))
 #         print(*list)
 # print_operation_table(lambda x, y: x * y, 6, 6)
+
+# решение с семинара
+# def print_operation_table(operation, num_rows=9, num_columns=9):
+#     pritntedRows = 1
+#     printedColumns = 1
+#     if num_columns < 2 or num_rows < 2:
+#         print('ОШИБКА! Размерности таблицы должны быть больше 2!')
+#         return
+#     maxLongNum = len(str(operation(num_columns, num_rows)))
+#     while pritntedRows <= num_rows:
+#         while printedColumns <= num_columns:
+#             if maxLongNum < len(str(operation(printedColumns, pritntedRows))):
+#                 maxLongNum = len(str(operation(printedColumns, pritntedRows)))
+#             printedColumns += 1
+#         pritntedRows += 1
+#         printedColumns = 1
+    
+#     pritntedRows = 0
+#     printedColumns = 0
+#     while pritntedRows <= num_rows:
+#         row = []
+#         while printedColumns <= num_columns:
+#             if pritntedRows == 0:
+#                 row.append(('{0: >' + f'{maxLongNum}' + '}').format(printedColumns))
+#             elif printedColumns == 0:
+#                 row.append(('{0: >' + f'{maxLongNum}' + '}').format(pritntedRows))
+#             else:
+#                 if maxLongNum > 1:
+#                     numbOperation = operation(printedColumns, pritntedRows)
+#                     row.append(('{0: >' + f'{maxLongNum}' + '}').format(numbOperation))
+#                 else:
+#                     row.append(str(operation(printedColumns, pritntedRows)))
+#             printedColumns += 1
+#         print(*row, sep=' ')
+#         pritntedRows += 1
+#         printedColumns = 0
+
+
+# print_operation_table(lambda x, y: x / y, 4, 4)
