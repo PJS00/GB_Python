@@ -131,4 +131,3 @@ def write_txt(filename, phone_book):
 if __name__ == "__main__":
     work_with_phonebook()
 
-
